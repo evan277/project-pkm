@@ -1,39 +1,67 @@
+/* Mengatur header agar tetap di atas saat scroll */
 header {
+    /* Memberikan jarak 20px dari atas */
     margin-top: 20px;
+    /* Menetapkan posisi tetap, agar header tetap di atas saat scroll */
     position: fixed;
     top: 0;
     left: 0;
+    /* Lebar header 100% dari lebar layar */
     width: 100%;
+    /* Memberikan padding di kiri dan kanan */
     padding: 1rem 9%;
+    /* Latar belakang transparan */
     background-color: transparent;
+    /* Menggunakan flexbox untuk menata elemen di dalam header */
     display: flex;
+    /* Menyusun elemen secara horizontal dan memberi jarak antar elemen */
     justify-content: space-between;
+    /* Menyelaraskan elemen secara vertikal di tengah */
     align-items: center;
+    /* Memberikan prioritas tampil header dengan z-index */
     z-index: 100;
 }
 
+/* Menata logo di header */
 .logo {
+    /* Ukuran font untuk logo */
     font-size: 3rem;
+    /* Warna logo sesuai dengan warna utama */
     color: var(--primary-color);
+    /* Tebal font logo */
     font-weight: 800;
+    /* Menjadikan logo bisa di-klik */
     cursor: pointer;
+    /* Efek transisi saat interaksi hover */
     transition: 0.5s ease;
 }
 
+/* Efek saat logo di-hover */
 .logo:hover {
+    /* Memperbesar ukuran logo sedikit */
     transform: scale(1.1);
 }
 
+/* Menata link navigasi di dalam header */
 nav a {
+    /* Ukuran font untuk link */
     font-size: 1.8rem;
+    /* Warna teks link sesuai warna teks utama */
     color: var(--text-color);
+    /* Memberikan jarak kiri antar link */
     margin-left: 4rem;
+    /* Tebal font link */
     font-weight: 500;
+    /* Efek transisi saat interaksi hover */
     transition: 0.3s ease;
+    /* Membuat border bawah link transparan untuk efek hover */
     border-bottom: 3px solid transparent;
 }
 
+/* Efek saat link di-hover atau diberi kelas 'active' */
 nav a:hover, nav a.active {
+    /* Mengubah warna teks sesuai dengan warna utama */
     color: var(--primary-color);
+    /* Menambahkan garis bawah dengan warna utama */
     border-bottom: 3px solid var(--primary-color);
 }

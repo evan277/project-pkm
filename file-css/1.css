@@ -1,25 +1,39 @@
+/* Ambil font Poppins dari Google Fonts (berat 100–600). “display=swap” supaya teks tampil dulu dengan font cadangan, lalu pindah ke Poppins saat sudah siap */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
+    /* Warna utama untuk aksen */
     --primary-color: #b74b4b;
+    /* Warna dasar halaman */
     --background-color: black;
+    /* Warna teks agar kontras */
     --text-color: white;
 }
 
 * {
+    /* Buang jarak dan padding bawaan browser */
     margin: 0;
     padding: 0;
+    /* Mudah atur kotak elemen: width/height sudah termasuk padding & border */
     box-sizing: border-box;
+    /* Hilangkan garis bawah link, dsb. */
     text-decoration: none;
+    /* Biar bersih, hilangkan border default */
     border: none;
+    /* Hilangkan garis fokus default */
     outline: none;
+    /* Pakai font Poppins untuk konsistensi */
     font-family: 'Poppins', sans-serif;
 }
 
 body {
+    /* Seluruh halaman selebar layar */
     width: 100%;
+    /* Tinggi mengikuti tinggi layar */
     height: 100vh;
+    /* Cegah scroll horizontal bila konten melebar */
     overflow-x: hidden;
+    /* Terapkan warna latar dan teks yang sudah ditentukan */
     background-color: var(--background-color);
     color: var(--text-color);
 }

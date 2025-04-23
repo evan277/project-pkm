@@ -1,41 +1,73 @@
+/* Menata ikon sosial dengan link */
 .social-icons a {
+    /* Menggunakan inline-flex agar ikon tersusun secara horizontal */
     display: inline-flex;
+    /* Menyusun konten ikon di tengah */
     justify-content: center;
     align-items: center;
+    /* Ukuran ikon 4x4 rem */
     width: 4rem;
     height: 4rem;
+    /* Latar belakang transparan */
     background-color: transparent;
+    /* Menambahkan border dengan warna utama */
     border: 0.2rem solid var(--primary-color);
+    /* Ukuran font untuk ikon */
     font-size: 2rem;
+    /* Membulatkan bentuk ikon menjadi lingkaran */
     border-radius: 50%;
+    /* Memberikan margin di sekitar ikon */
     margin: 3rem 1.5rem 3rem 0;
+    /* Menambahkan transisi halus saat hover */
     transition: 0.3s ease;
+    /* Warna teks sesuai dengan warna utama */
     color: var(--primary-color);
 }
 
+/* Efek saat ikon sosial di-hover */
 .social-icons a:hover {
+    /* Mengubah warna teks menjadi warna latar belakang */
     color: var(--background-color);
+    /* Memperbesar dan menggeser ikon ke atas sedikit */
     transform: scale(1.3) translateY(-5px);
+    /* Menambahkan latar belakang dengan warna utama */
     background-color: var(--primary-color);
+    /* Menambahkan bayangan di sekitar ikon */
     box-shadow: 0 0 25px var(--primary-color);
 }
 
+/* Menata tombol dengan kelas btn */
 .btn {
+    /* Menggunakan inline-block untuk tombol */
     display: inline-block;
+    /* Padding tombol atas bawah 1rem, kiri kanan 2.8rem */
     padding: 1rem 2.8rem;
+    /* Latar belakang sesuai dengan warna latar belakang halaman */
     background-color: var(--background-color);
+    /* Membuat tombol dengan sudut yang membulat */
     border-radius: 4rem;
+    /* Ukuran font untuk tombol */
     font-size: 1.6rem;
+    /* Warna teks sesuai dengan warna utama */
     color: var(--primary-color);
+    /* Ketebalan font tombol */
     font-weight: 600;
+    /* Menambahkan border dengan warna utama */
     border: 2px solid var(--primary-color);
+    /* Menambahkan transisi halus saat hover */
     transition: 0.3s ease;
+    /* Menjadikan tombol bisa di-klik */
     cursor: pointer;
 }
 
+/* Efek saat tombol di-hover */
 .btn:hover {
+    /* Memperbesar tombol sedikit */
     transform: scale(1.03);
+    /* Mengubah latar belakang tombol menjadi warna utama */
     background-color: var(--primary-color);
+    /* Mengubah warna teks tombol menjadi latar belakang */
     color: var(--background-color);
+    /* Menambahkan bayangan di sekitar tombol */
     box-shadow: 0 0 25px var(--primary-color);
 }

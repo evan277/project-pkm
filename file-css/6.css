@@ -1,0 +1,77 @@
+/* Media query untuk tampilan dengan lebar maksimal 768px (biasanya untuk perangkat mobile atau tablet) */
+@media (max-width: 768px) {
+
+    /* Menata bagian home dengan layout kolom terbalik */
+    .home {
+      /* Mengubah arah layout menjadi kolom terbalik */
+      flex-direction: column-reverse;
+      /* Mengurangi jarak antar elemen */
+      gap: 2rem;
+      /* Mengurangi padding bagian atas dan kiri-kanan */
+      padding: 4rem 5%;
+      /* Memberikan margin atas untuk menjaga jarak */
+      margin-top: 80px;
+    }
+  
+    /* Menyusun teks dalam home-content menjadi rata tengah */
+    .home .home-content {
+      text-align: center;
+    }
+  
+    /* Mengubah ukuran font untuk judul h1 */
+    .home-content h1 {
+      font-size: 3.6rem;
+      line-height: 1.2;
+    }
+  
+    /* Mengubah ukuran font untuk subjudul h3 */
+    .home-content h3 {
+      font-size: 2.8rem;
+    }
+  
+    /* Mengubah ukuran font untuk paragraf p */
+    .home-content p {
+      font-size: 1.4rem;
+    }
+  
+    /* Menata gambar dengan lebar 60% dari lebar viewport */
+    .home-img img {
+      width: 60vw;
+      /* Menghapus batas lebar maksimal gambar */
+      max-width: none;
+      /* Menghapus batas lebar minimal gambar */
+      min-width: unset;
+    }
+  
+    /* Menata ukuran font untuk link navigasi */
+    nav a {
+      font-size: 1.6rem;
+      /* Mengurangi jarak kiri antar link navigasi */
+      margin-left: 2rem;
+    }
+  
+    /* Menata ukuran ikon sosial media */
+    .social-icons a {
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 1.8rem;
+      /* Mengurangi jarak antar ikon sosial media */
+      margin: 2rem 1rem 2rem 0;
+    }
+  
+    /* Menata ukuran tombol dengan kelas btn */
+    .btn {
+      /* Mengurangi padding tombol */
+      padding: 0.8rem 2.4rem;
+      font-size: 1.4rem;
+    }
+  
+    /* Menata ukuran teks typing-text */
+    .typing-text {
+      font-size: 2.4rem;
+      /* Mengubah lebar minimal teks menjadi otomatis */
+      min-width: auto;
+      /* Menambahkan margin di atas dan bawah */
+      margin: 1rem 0;
+    }
+}

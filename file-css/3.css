@@ -1,45 +1,88 @@
+/* Mengatur bagian section dengan tinggi minimal 100vh dan padding */
 section {
+    /* Tinggi minimal section 100% dari tinggi viewport */
     min-height: 100vh;
+    /* Memberikan padding atas, kiri-kanan, dan bawah */
     padding: 5rem 9% 5rem;
 }
 
+/* Mengatur gaya untuk halaman home */
 .home {
+    /* Memberikan jarak atas 40px */
+    margin-top: 40px;
+    /* Menggunakan flexbox untuk menyusun elemen */
     display: flex;
+    /* Menyusun elemen secara horizontal dan di tengah */
     justify-content: center;
     align-items: center;
+    /* Memberikan jarak antar elemen */
     gap: 8rem;
+    /* Latar belakang menggunakan warna yang sudah didefinisikan */
     background-color: var(--background-color);
 }
 
+/* Menata teks dalam home-content, bagian h1 */
 .home .home-content h1 {
+    /* Ukuran font besar untuk judul */
     font-size: 6rem;
+    /* Menambah ketebalan font */
     font-weight: 700;
+    /* Menambah jarak antar baris */
     line-height: 1.3;
 }
 
+/* Memberikan warna khusus pada elemen span */
 span {
+    /* Menggunakan warna utama */
     color: var(--primary-color);
 }
 
+/* Menata teks h3 dalam home-content */
 .home-content h3 {
+    /* Ukuran font untuk subjudul */
     font-size: 4rem;
+    /* Memberikan jarak bawah */
     margin-bottom: 1rem;
+    /* Ketebalan font */
     font-weight: 700;
 }
 
+/* Menata teks paragraf dalam home-content */
 .home-content p {
+    /* Ukuran font untuk teks paragraf */
     font-size: 1.6rem;
 }
 
+/* Menata gambar dalam home-img */
 .home-img img {
-    position: relative;
-    width: 32vw;
+    /* Menampilkan gambar sebagai block untuk menghindari margin otomatis */
+    display: block;
+    /* Lebar gambar 70% dari lebar viewport */
+    width: 70vw;
+    /* Lebar maksimal gambar */
+    max-width: 600px; 
+    /* Lebar minimal gambar */
+    min-width: 250px; 
+    /* Menetapkan aspek rasio gambar agar selalu persegi */
+    aspect-ratio: 1 / 1;
+    /* Membulatkan sudut gambar */
     border-radius: 50%;
+    /* Menambahkan bayangan di sekitar gambar */
     box-shadow: 0 0 25px var(--primary-color);
+    /* Menambahkan efek kursor pointer pada gambar */
     cursor: pointer;
-    transition: 0.2s linear;
+    /* Menambahkan transisi halus untuk efek hover */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    /* Memberikan sedikit saturasi dan kontras pada gambar */
+    filter: saturate(1.1) contrast(1.05);
 }
 
+/* Efek saat gambar di-hover */
 .home-img img:hover {
-    transform: scale(1.05);
+    /* Memperbesar gambar sedikit dan memutar gambar */
+    transform: scale(1.1) rotate(-2deg);
+    /* Menambahkan bayangan yang lebih dramatis */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4), 0 0 35px var(--primary-color);
+    /* Menambahkan efek saturasi dan kecerahan pada gambar */
+    filter: saturate(1.2) brightness(1.1);
 }
