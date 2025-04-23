@@ -1,0 +1,23 @@
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Software Developer";
+    color: var(--primary-color);
+    animation: words 20s infinite;
+}
+
+@keyframes words {
+    0%, 20% { content: "Web Developer"; }
+    21%, 40% { content: "Developer"; }
+    41%, 60% { content: "Web Designer"; }
+    61%, 80% { content: "Youtuber"; }
+    81%, 100% { content: "Script Writer"; }
+}
