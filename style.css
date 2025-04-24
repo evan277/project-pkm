@@ -1,0 +1,383 @@
+/* Ambil font Poppins dari Google Fonts (berat 100–600). “display=swap” supaya teks tampil dulu dengan font cadangan, lalu pindah ke Poppins saat sudah siap */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    /* Warna utama untuk aksen */
+    --primary-color: #b74b4b;
+    /* Warna dasar halaman */
+    --background-color: black;
+    /* Warna teks agar kontras */
+    --text-color: white;
+}
+
+* {
+    /* Buang jarak dan padding bawaan browser */
+    margin: 0;
+    padding: 0;
+    /* Mudah atur kotak elemen: width/height sudah termasuk padding & border */
+    box-sizing: border-box;
+    /* Hilangkan garis bawah link, dsb. */
+    text-decoration: none;
+    /* Biar bersih, hilangkan border default */
+    border: none;
+    /* Hilangkan garis fokus default */
+    outline: none;
+    /* Pakai font Poppins untuk konsistensi */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Seluruh halaman selebar layar */
+    width: 100%;
+    /* Tinggi mengikuti tinggi layar */
+    height: 100vh;
+    /* Cegah scroll horizontal bila konten melebar */
+    overflow-x: hidden;
+    /* Terapkan warna latar dan teks yang sudah ditentukan */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+/* Mengatur header agar tetap di atas saat scroll */
+header {
+    /* Memberikan jarak 20px dari atas */
+    margin-top: 20px;
+    /* Menetapkan posisi tetap, agar header tetap di atas saat scroll */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Lebar header 100% dari lebar layar */
+    width: 100%;
+    /* Memberikan padding di kiri dan kanan */
+    padding: 1rem 9%;
+    /* Latar belakang transparan */
+    background-color: transparent;
+    /* Menggunakan flexbox untuk menata elemen di dalam header */
+    display: flex;
+    /* Menyusun elemen secara horizontal dan memberi jarak antar elemen */
+    justify-content: space-between;
+    /* Menyelaraskan elemen secara vertikal di tengah */
+    align-items: center;
+    /* Memberikan prioritas tampil header dengan z-index */
+    z-index: 100;
+}
+
+/* Menata logo di header */
+.logo {
+    /* Ukuran font untuk logo */
+    font-size: 3rem;
+    /* Warna logo sesuai dengan warna utama */
+    color: var(--primary-color);
+    /* Tebal font logo */
+    font-weight: 800;
+    /* Menjadikan logo bisa di-klik */
+    cursor: pointer;
+    /* Efek transisi saat interaksi hover */
+    transition: 0.5s ease;
+}
+
+/* Efek saat logo di-hover */
+.logo:hover {
+    /* Memperbesar ukuran logo sedikit */
+    transform: scale(1.1);
+}
+
+/* Menata link navigasi di dalam header */
+nav a {
+    /* Ukuran font untuk link */
+    font-size: 1.8rem;
+    /* Warna teks link sesuai warna teks utama */
+    color: var(--text-color);
+    /* Memberikan jarak kiri antar link */
+    margin-left: 4rem;
+    /* Tebal font link */
+    font-weight: 500;
+    /* Efek transisi saat interaksi hover */
+    transition: 0.3s ease;
+    /* Membuat border bawah link transparan untuk efek hover */
+    border-bottom: 3px solid transparent;
+}
+
+/* Efek saat link di-hover atau diberi kelas 'active' */
+nav a:hover, nav a.active {
+    /* Mengubah warna teks sesuai dengan warna utama */
+    color: var(--primary-color);
+    /* Menambahkan garis bawah dengan warna utama */
+    border-bottom: 3px solid var(--primary-color);
+}
+/* Mengatur bagian section dengan tinggi minimal 100vh dan padding */
+section {
+    /* Tinggi minimal section 100% dari tinggi viewport */
+    min-height: 100vh;
+    /* Memberikan padding atas, kiri-kanan, dan bawah */
+    padding: 5rem 9% 5rem;
+}
+
+/* Mengatur gaya untuk halaman home */
+.home {
+    /* Memberikan jarak atas 40px */
+    margin-top: 40px;
+    /* Menggunakan flexbox untuk menyusun elemen */
+    display: flex;
+    /* Menyusun elemen secara horizontal dan di tengah */
+    justify-content: center;
+    align-items: center;
+    /* Memberikan jarak antar elemen */
+    gap: 8rem;
+    /* Latar belakang menggunakan warna yang sudah didefinisikan */
+    background-color: var(--background-color);
+}
+
+/* Menata teks dalam home-content, bagian h1 */
+.home .home-content h1 {
+    /* Ukuran font besar untuk judul */
+    font-size: 6rem;
+    /* Menambah ketebalan font */
+    font-weight: 700;
+    /* Menambah jarak antar baris */
+    line-height: 1.3;
+}
+
+/* Memberikan warna khusus pada elemen span */
+span {
+    /* Menggunakan warna utama */
+    color: var(--primary-color);
+}
+
+/* Menata teks h3 dalam home-content */
+.home-content h3 {
+    /* Ukuran font untuk subjudul */
+    font-size: 4rem;
+    /* Memberikan jarak bawah */
+    margin-bottom: 1rem;
+    /* Ketebalan font */
+    font-weight: 700;
+}
+
+/* Menata teks paragraf dalam home-content */
+.home-content p {
+    /* Ukuran font untuk teks paragraf */
+    font-size: 1.6rem;
+}
+
+/* Menata gambar dalam home-img */
+.home-img img {
+    /* Menampilkan gambar sebagai block untuk menghindari margin otomatis */
+    display: block;
+    /* Lebar gambar 70% dari lebar viewport */
+    width: 70vw;
+    /* Lebar maksimal gambar */
+    max-width: 600px; 
+    /* Lebar minimal gambar */
+    min-width: 250px; 
+    /* Menetapkan aspek rasio gambar agar selalu persegi */
+    aspect-ratio: 1 / 1;
+    /* Membulatkan sudut gambar */
+    border-radius: 50%;
+    /* Menambahkan bayangan di sekitar gambar */
+    box-shadow: 0 0 25px var(--primary-color);
+    /* Menambahkan efek kursor pointer pada gambar */
+    cursor: pointer;
+    /* Menambahkan transisi halus untuk efek hover */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    /* Memberikan sedikit saturasi dan kontras pada gambar */
+    filter: saturate(1.1) contrast(1.05);
+}
+
+/* Efek saat gambar di-hover */
+.home-img img:hover {
+    /* Memperbesar gambar sedikit dan memutar gambar */
+    transform: scale(1.1) rotate(-2deg);
+    /* Menambahkan bayangan yang lebih dramatis */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4), 0 0 35px var(--primary-color);
+    /* Menambahkan efek saturasi dan kecerahan pada gambar */
+    filter: saturate(1.2) brightness(1.1);
+}
+/* Menata ikon sosial dengan link */
+.social-icons a {
+    /* Menggunakan inline-flex agar ikon tersusun secara horizontal */
+    display: inline-flex;
+    /* Menyusun konten ikon di tengah */
+    justify-content: center;
+    align-items: center;
+    /* Ukuran ikon 4x4 rem */
+    width: 4rem;
+    height: 4rem;
+    /* Latar belakang transparan */
+    background-color: transparent;
+    /* Menambahkan border dengan warna utama */
+    border: 0.2rem solid var(--primary-color);
+    /* Ukuran font untuk ikon */
+    font-size: 2rem;
+    /* Membulatkan bentuk ikon menjadi lingkaran */
+    border-radius: 50%;
+    /* Memberikan margin di sekitar ikon */
+    margin: 3rem 1.5rem 3rem 0;
+    /* Menambahkan transisi halus saat hover */
+    transition: 0.3s ease;
+    /* Warna teks sesuai dengan warna utama */
+    color: var(--primary-color);
+}
+
+/* Efek saat ikon sosial di-hover */
+.social-icons a:hover {
+    /* Mengubah warna teks menjadi warna latar belakang */
+    color: var(--background-color);
+    /* Memperbesar dan menggeser ikon ke atas sedikit */
+    transform: scale(1.3) translateY(-5px);
+    /* Menambahkan latar belakang dengan warna utama */
+    background-color: var(--primary-color);
+    /* Menambahkan bayangan di sekitar ikon */
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+/* Menata tombol dengan kelas btn */
+.btn {
+    /* Menggunakan inline-block untuk tombol */
+    display: inline-block;
+    /* Padding tombol atas bawah 1rem, kiri kanan 2.8rem */
+    padding: 1rem 2.8rem;
+    /* Latar belakang sesuai dengan warna latar belakang halaman */
+    background-color: var(--background-color);
+    /* Membuat tombol dengan sudut yang membulat */
+    border-radius: 4rem;
+    /* Ukuran font untuk tombol */
+    font-size: 1.6rem;
+    /* Warna teks sesuai dengan warna utama */
+    color: var(--primary-color);
+    /* Ketebalan font tombol */
+    font-weight: 600;
+    /* Menambahkan border dengan warna utama */
+    border: 2px solid var(--primary-color);
+    /* Menambahkan transisi halus saat hover */
+    transition: 0.3s ease;
+    /* Menjadikan tombol bisa di-klik */
+    cursor: pointer;
+}
+
+/* Efek saat tombol di-hover */
+.btn:hover {
+    /* Memperbesar tombol sedikit */
+    transform: scale(1.03);
+    /* Mengubah latar belakang tombol menjadi warna utama */
+    background-color: var(--primary-color);
+    /* Mengubah warna teks tombol menjadi latar belakang */
+    color: var(--background-color);
+    /* Menambahkan bayangan di sekitar tombol */
+    box-shadow: 0 0 25px var(--primary-color);
+}
+/* Menata teks typing-text */
+.typing-text {
+    /* Ukuran font untuk teks */
+    font-size: 34px;
+    /* Ketebalan font untuk teks */
+    font-weight: 600;
+    /* Lebar minimal teks agar tetap proporsional */
+    min-width: 280px;
+}
+
+/* Menata elemen span di dalam typing-text */
+.typing-text span {
+    /* Menetapkan posisi relatif untuk mempermudah pengaturan pseudo-elemen */
+    position: relative;
+}
+
+/* Menambahkan teks dengan animasi di dalam span */
+.typing-text span::before {
+    /* Menentukan teks awal yang akan ditampilkan */
+    content: "Software Developer";
+    /* Menggunakan warna utama untuk teks */
+    color: var(--primary-color);
+    /* Mengaplikasikan animasi 'words' yang sudah didefinisikan */
+    animation: words 20s infinite;
+}
+
+/* Menyusun animasi untuk mengganti kata dalam teks */
+@keyframes words {
+    /* Menampilkan "Web Developer" dari 0% sampai 20% */
+    0%, 20% { content: "Web Developer"; }
+    /* Menampilkan "Developer" dari 21% sampai 40% */
+    21%, 40% { content: "Developer"; }
+    /* Menampilkan "Web Designer" dari 41% sampai 60% */
+    41%, 60% { content: "Web Designer"; }
+    /* Menampilkan "Youtuber" dari 61% sampai 80% */
+    61%, 80% { content: "Youtuber"; }
+    /* Menampilkan "Script Writer" dari 81% sampai 100% */
+    81%, 100% { content: "Script Writer"; }
+}
+/* Media query untuk tampilan dengan lebar maksimal 768px (biasanya untuk perangkat mobile atau tablet) */
+@media (max-width: 768px) {
+
+    /* Menata bagian home dengan layout kolom terbalik */
+    .home {
+      /* Mengubah arah layout menjadi kolom terbalik */
+      flex-direction: column-reverse;
+      /* Mengurangi jarak antar elemen */
+      gap: 2rem;
+      /* Mengurangi padding bagian atas dan kiri-kanan */
+      padding: 4rem 5%;
+      /* Memberikan margin atas untuk menjaga jarak */
+      margin-top: 80px;
+    }
+  
+    /* Menyusun teks dalam home-content menjadi rata tengah */
+    .home .home-content {
+      text-align: center;
+    }
+  
+    /* Mengubah ukuran font untuk judul h1 */
+    .home-content h1 {
+      font-size: 3.6rem;
+      line-height: 1.2;
+    }
+  
+    /* Mengubah ukuran font untuk subjudul h3 */
+    .home-content h3 {
+      font-size: 2.8rem;
+    }
+  
+    /* Mengubah ukuran font untuk paragraf p */
+    .home-content p {
+      font-size: 1.4rem;
+    }
+  
+    /* Menata gambar dengan lebar 60% dari lebar viewport */
+    .home-img img {
+      width: 60vw;
+      /* Menghapus batas lebar maksimal gambar */
+      max-width: none;
+      /* Menghapus batas lebar minimal gambar */
+      min-width: unset;
+    }
+  
+    /* Menata ukuran font untuk link navigasi */
+    nav a {
+      font-size: 1.6rem;
+      /* Mengurangi jarak kiri antar link navigasi */
+      margin-left: 2rem;
+    }
+  
+    /* Menata ukuran ikon sosial media */
+    .social-icons a {
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 1.8rem;
+      /* Mengurangi jarak antar ikon sosial media */
+      margin: 2rem 1rem 2rem 0;
+    }
+  
+    /* Menata ukuran tombol dengan kelas btn */
+    .btn {
+      /* Mengurangi padding tombol */
+      padding: 0.8rem 2.4rem;
+      font-size: 1.4rem;
+    }
+  
+    /* Menata ukuran teks typing-text */
+    .typing-text {
+      font-size: 2.4rem;
+      /* Mengubah lebar minimal teks menjadi otomatis */
+      min-width: auto;
+      /* Menambahkan margin di atas dan bawah */
+      margin: 1rem 0;
+    }
+}
